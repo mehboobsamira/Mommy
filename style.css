@@ -34,11 +34,19 @@ body {
   text-align: center;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  transition: transform 1s;
+  transition: transform 1s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
+}
+
+.page:first-child {
+  transform: rotateY(0deg);
+}
+
+.page.active {
+  transform: rotateY(0deg);
 }
 
 .page img {
@@ -50,10 +58,6 @@ body {
   box-shadow: 0 0 25px rgba(255,255,255,0.6);
 }
 
-.page.active {
-  transform: rotateY(0deg);
-}
-
 button {
   margin-top: 25px;
   padding: 10px 25px;
@@ -62,4 +66,5 @@ button {
   background: #ff5fa2;
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
